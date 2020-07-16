@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Home</title>
+{% endblock %}
+
+{% block content %}
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-copy">
+                <h1>{{ heroData.title }}</h1>
+                <p>{{ heroData.description }}</p>
+            </div>
+            <img src="{{ heroData.image }}" alt="Chef">
+        </section>
+        
+        <section class="featured-recipes">
+            <h2>Mais acessadas</h2>
+            <div class="cards">
+                {% for item in items %}
+                <div class="card">
+                    <div class="card_img_container">
+                        <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+                    </div>
+                    <div class="card_content">
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.author}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal">            
+                <div class="modal-content">
+                    <img src="" alt="">
+                    <h2 class="recipe-title"></h2>
+                    <p class="recipe-author"></p>
+                </div>
+                <a class="close-modal">Fechar o Modal</a>
+            </div>
+        </div> 
+    </main>
+{% endblock %}

@@ -13,7 +13,3 @@ for (let card of cards) {
 
     })
 }
-
-document.querySelector(".close-modal").addEventListener("click", function(){
-    modalOverlay.classList.remove("active");
-})

@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto";
 
 
 /*===Reset CSS===*/
@@ -170,10 +170,12 @@ footer p {
     border-radius: 16px;
     padding: 30px;
     align-items: center;
-    
+    position: relative;
 }
 
 .modal .close-modal{
+    position: absolute;
+    bottom: 20px;
     text-align: center;
     font-weight: normal;
     font-size: 16px;
@@ -209,4 +211,41 @@ footer p {
 .modal-overlay.active{
     opacity: 1;
     visibility: visible;
+}
+
+/*===Recipee===*/
+section.recipe-wrapper{
+    margin: 0 231px;
+    min-width: 940px;
+
+}
+
+.recipe-wrapper img{
+    border-radius: 15px;
+    min-height: 280px;
+    width: 100%;
+}
+
+h2.recipe-title {
+    margin: 50px auto 0px;
+    font-size: 36px;
+    color: #111111;
+    text-align: center;
+}
+
+p.recipe-author{
+    margin:4px auto 50px;
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+}
+
+.title_and_button h3{
+    display: inline-block;
+}
+.title_and_button a{
+    display: inline-block;
+    font-size: 12px;
+    color: #999999;
+    text-transform: uppercase;
 }
