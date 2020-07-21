@@ -1,15 +1,27 @@
-const modalOverlay = document.querySelector('.modal-overlay');
 const cards = document.querySelectorAll('.card');
+const content = document.querySelectorAll('.recipe-wrapper .content');
+const buttons = document.querySelectorAll('.button');
 
 for (let card of cards) {
     card.addEventListener("click", function(){
-        const recipeTitle = card.querySelector('h3').textContent;
-        const recipeAuthor = card.querySelector('p').textContent;
-        const recipeImg = card.querySelector('img').src;
-        modalOverlay.querySelector('.recipe-title').textContent = recipeTitle;
-        modalOverlay.querySelector('.recipe-author').textContent = recipeAuthor;
-        modalOverlay.querySelector('img').src = recipeImg;
-        modalOverlay.classList.add('active');
+    let recipeIndex = card.getAttribute("id")
+    console.log(recipeIndex);
+    window.location.href = `/recipes/${recipeIndex}`
 
     })
+}
+
+for (let [i,button] of buttons.entries()) {
+    button.addEventListener("click", () => {
+        if(content[i].classList.contains("show")){
+            content[i].classList.remove('show')
+            content[i].classList.add('hide')
+            button.innerHTML= "Mostrar"
+            
+        } else {
+            content[i].classList.add('show')
+            content[i].classList.remove('hide')
+            button.innerHTML= "Esconder"
+        }
+    })  
 }

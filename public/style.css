@@ -213,7 +213,7 @@ footer p {
     visibility: visible;
 }
 
-/*===Recipee===*/
+/*===Recipe===*/
 section.recipe-wrapper{
     margin: 0 231px;
     min-width: 940px;
@@ -243,9 +243,41 @@ p.recipe-author{
 .title_and_button h3{
     display: inline-block;
 }
-.title_and_button a{
+
+
+.featured-recipes.solo {
+margin-top: 0;
+}
+/*===Botão ativo - Mostrar Receita===*/
+.title_and_button a.button{
     display: inline-block;
     font-size: 12px;
     color: #999999;
     text-transform: uppercase;
+}
+
+.title_and_button a.button:hover{
+    cursor: pointer;
+}
+
+.content.show{
+    padding-bottom: 5%;
+    display: block;
+    list-style-position: inside;
+}
+
+.content.hide{
+    max-width: 940px;
+    display: none;
+    overflow: hidden;
+}
+
+ul li{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.additional_info p {
+    font-size: 18px;
+    line-height: 28px;
 }

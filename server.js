@@ -30,6 +30,10 @@ const heroData = {
 server.get("/about", (req,res) => {
     return res.render("about")
 })
+server.get("/recipes", (req,res) => {
+    return res.render("recipes", {items:recipes})
+})
+
 server.get("/recipes/:index", (req,res) => {
     const recipeIndex = req.params.index;
 
@@ -44,7 +48,7 @@ server.get("/recipes/:index", (req,res) => {
     }
 
     console.log(recipes[recipeIndex]);
-    return res.render("recipes", {recipe: recipes[recipeIndex]})
+    return res.render("recipe_single", {recipe: recipes[recipeIndex]})
 })
 
 server.listen(port, () => {
