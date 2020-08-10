@@ -44,7 +44,7 @@ server.get("/recipes/:index", (req,res) => {
     })
 
     if (!recipes[recipeIndex]) {
-        return res.send("Receite nao encontrada");
+        return res.send("Receita nao encontrada");
     }
 
     console.log(recipes[recipeIndex]);
